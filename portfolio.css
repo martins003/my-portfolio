@@ -284,7 +284,9 @@ footer .socials{
   .intro {
     padding: 20px;
   }
-
+.intro .dev{
+  display: flex;
+}
   .intro h1 {
     font-size: 10vw; /* Scales with screen size */
     text-align: start;
