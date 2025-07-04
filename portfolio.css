@@ -263,6 +263,9 @@ footer .socials{
     align-items: flex-start;
     margin-bottom: 50px;
   }
+ header div h1{
+    font-size:1.2rem ;
+  }
 
   nav ul {
     display: none;
