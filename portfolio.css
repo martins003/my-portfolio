@@ -257,6 +257,8 @@ footer .socials{
 
   /* Header adjustments */
   header div{
+   display:flex;
+   height:60px
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 50px;
