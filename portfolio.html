@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>martinKincaid</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="portfolio.css">
+  <style>
+  
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>martinKincaid</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contacts">contact</a></li>
+        <li><a href="#services">Services</a></li>
+         
+      </ul>
+    </nav>
+    </div>
+  </header>
+  <section class="intro">
+    <div class="dev">
+      <h1>Frontend </h1>
+      <h1>Developer</h1>
+    </div>
+   <span>martinKincaid</span>
+   <hr>
+    <p >
+      We help you and your Organisation create a strong and lasting <br>presence for your businesses or enterprises online.
+    </p>
+  </section>
+
+  <section class="about" id="about">
+    <div class="aboutme">
+      <div class="about-img">
+       <p> About Me</p>
+        <img src="my-img.jpg" alt="">
+        <div class="contacts">
+        <a href=""><i class="fa-brands fa-square-x-twitter fa-2x"></i></a>
+        <a href=""><i class="fa-brands fa-facebook fa-2x"></i></a>
+        <a href=""><i class="fa-brands fa-square-whatsapp fa-2x"></i></a>
+        <a href=""><i class="fa-solid fa-envelope fa-2x"></i></a>
+        </div>
+       
+      </div>
+      <div class="about-speech">
+        <h3>Hi , I'm Francis Umeokoli. <br>a frontend Developer based in Nigeria</h3>
+        <p> I specialize in building responsive, user-friendly, and visually engaging websites using HTML, CSS, JavaScript, and modern frameworks like React.
+        I love transforming ideas into interactive digital experiences and always aim to create clean, accessible, and high-performing web solutions. Whether you need a personal portfolio, a business site, or a landing page that converts, I can help you make a strong and lasting impression online.
+        When I'm not coding, you'll probably find me exploring new tech trends, improving my UI skills, reading books and I like movies too <br>
+        Let's build something amazing together!</p>
+
+      </div>
+    </div>
+  </section>
+<section class="services" id="services">
+  <h3>.SERVICES</h3>
+  <div class="service-list">
+
+    <div class="service-card">
+      <i class="fa-solid fa-laptop-code fa-3x"></i>
+      <h4>Web Development</h4>
+      <p>Building responsive, high-performance websites using HTML, CSS, JavaScript, and React.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fa-solid fa-pen-nib fa-3x"></i>
+      <h4>UI/UX Design</h4>
+      <p>Designing clean, modern, and user-friendly interfaces to improve user experience and engagement.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fa-brands fa-wordpress fa-3x"></i>
+      <h4>WordPress Development</h4>
+      <p>Custom WordPress sites tailored to your business, fully responsive and easy to manage.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fa-solid fa-screwdriver-wrench fa-3x"></i>
+      <h4>Website Maintenance</h4>
+      <p>Providing ongoing support, updates, and performance optimizations to keep your site running smoothly.</p>
+    </div>
+
+  </div>
+</section>
+
+  <section class="projects">
+    <h3>.PROJECTS</h3>
+    <div class="project-img">
+       <img src="https://picsum.photos/200/200?random=1" alt="Random Image 1" class="item1">
+    <img src="https://picsum.photos/200/200?random=2" alt="Random Image 2" class="item2">
+    <img src="https://picsum.photos/200/200?random=3" alt="Random Image 3" class="item3">
+      <img src="https://picsum.photos/200/200?random=4" alt="Random Image 1" class="item4"> 
+    </div>
+
+  </section>
+  <footer class="footer">
+    <div>Connect with us on</div>
+    
+    <div class="socials" id="contacts">
+         <a href=""><i class="fa-brands fa-square-x-twitter fa-2x"></i></a>
+        <a href=""><i class="fa-brands fa-facebook fa-2x"></i></a>
+        <a href=""><i class="fa-brands fa-instagram fa-2x"></i></a>
+        <a href=""><i class="fa-brands fa-square-whatsapp fa-2x"></i></a>
+        <a href=""><i class="fa-solid fa-envelope fa-2x"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+  <script>
+  const sections = document.querySelectorAll('section');
+
+  const options = {
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+      }
+    });
+  }, options);
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+</body>
+</html>

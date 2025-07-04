@@ -1,0 +1,358 @@
+  *{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background-color: rgba(0,0,0,0.9);
+  margin: 0;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+}
+
+section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+header{
+  padding-bottom: 70px;
+}
+
+header div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color:rgba(0,0,0,0.9);
+  
+}
+nav ul{
+   display: grid;
+  grid-gap: 20px;
+  padding-left: 20px;
+  list-style: none;
+  grid-template-columns: repeat(5,1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+nav a{
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 9px 16px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 16px;-webkit-tap-highlight-color: transparent; /* Removes grey tap background on mobile */
+  touch-action: manipulation;
+}
+nav a:hover{
+  background-color:white;
+  color:black;
+}
+.intro {
+  width: 100%;
+  display: block;
+  padding: 35px;
+  position: relative;
+}
+.intro .dev{
+  padding-bottom: 30px;
+}
+.intro h1{
+font-size: 7rem;
+padding: 0;
+font-size: max(8vw, 72px);
+font-weight: 500;
+line-height:110%
+}
+span{
+  position: absolute;
+  bottom: 118px;
+  right:50px;
+
+}
+.intro p{
+  padding-top: 30px;
+}
+img{
+  width: 200px;
+}
+.about{
+  background-color: white;
+  color: black;
+  padding: 50px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+.contacts{
+  align-items: start;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: space-around;
+}
+.contacts a{
+  color: rgb(78, 103, 124);
+}
+.contacts a:hover{
+  color: black;
+  width: 20px;
+  transition: all 3s ease-in;
+}
+.aboutme{
+  display: grid;
+  gap: 50px;
+  grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+}
+
+.about-img{
+  align-self: flex-start;
+  justify-self: center;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+}
+.about-img img{
+  height: auto;
+  border: none;
+  border-radius: 10px;
+}
+.about-img p{
+  font-size: 1.9rem;
+  padding-bottom: 30px;
+}
+.about-speech {
+  align-self: center;
+justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 15px;
+  background-color: rgb(78, 103, 124);
+  border-radius: 10px;
+}
+.about-speech h3{
+  font-size: 2rem;
+  padding-bottom: 3rem;
+}
+
+.services {
+  padding: 50px;
+  color: rgb(245, 236, 236);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.services h3 {
+  font-size: 2rem;
+  line-height: 1.7;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background-color: rgb(78, 103, 124);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.service-card i {
+  margin-bottom: 15px;
+}
+
+.service-card h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #e0e0e0;
+}
+.projects{
+  padding: 30px;
+  background-color: rgb(230, 227, 227);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.projects h3{
+  font-size: 2rem;
+  color: black;
+  line-height: 1.7;
+}
+.projects .project-img{
+  display: grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-gap: 20px;
+  padding: 70px;
+}
+.projects .project-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+ transition: transform 0.3s ease; 
+  
+}
+.projects .project-img img:hover{
+transform: scale(1.05);
+}
+.item1 {
+  grid-column: 1 / 3; /* Span from column 1 to 3 (2 columns) */
+}
+
+.item4 {
+  grid-row: 2 / 4; /* Span from row 2 to 4 (2 rows) */
+}
+footer{
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 25px;
+}
+footer .socials{
+  display: flex;
+  gap:10px;
+}
+
+@media (max-width: 768px) {
+
+  /* Header adjustments */
+  header div{
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 50px;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+    align-items: flex-start;
+  }
+
+  nav a {
+    font-size: 1rem;
+    padding: 0.2rem 0;
+  }
+
+  /* Intro section */
+  .intro {
+    padding: 20px;
+  }
+
+  .intro h1 {
+    font-size: 10vw; /* Scales with screen size */
+    text-align: start;
+  }
+
+  span {
+    position: static; /* Reset absolute positioning for small screens */
+    display: block;
+    text-align: end;
+    margin-top: 20px;
+  }
+
+  .intro p {
+    text-align: center;
+  }
+
+  /* About section */
+  .about {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .aboutme {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-img {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-img p{
+    align-self: start;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .about-img img{
+    max-width: 80px;
+  }
+
+  .about-speech {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .about-speech h3 {
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  /* Projects section */
+  .projects {
+    padding: 20px;
+  }
+
+  .projects .project-img {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Services section */
+  .services {
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px;
+  }
+
+  .service-list {
+    grid-template-columns: 1fr; /* Stack services vertically on mobile */
+  }
+
+  .service-card {
+    padding: 15px;
+  }
+}
+
